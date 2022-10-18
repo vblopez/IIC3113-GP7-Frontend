@@ -1,0 +1,54 @@
+
+.Lista__container {
+    min-height: 100%;
+    padding-bottom: 15vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.Lista__item {
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Lista__item__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Lista__item__container__left {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 200px;
+    display: flex;
+    flex-direction: row;
+}
+
+.Lista__item__container__right {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.Lista__item__container__left__nombre {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.Lista__item__container__left__precio {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.Lista__item__container__right__farmacia {
+    font-size: 16px;
+    color: #ccc;
+}
