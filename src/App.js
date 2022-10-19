@@ -8,7 +8,7 @@ import Lista from './components/lista/Lista';
 
 function App() {
 
-  const [drugs, setDrugs] = useState([]);
+  const [drugs, setDrugs] = useState({});
 
   return (
     <div className="App">

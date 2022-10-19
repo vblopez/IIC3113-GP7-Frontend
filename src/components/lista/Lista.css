@@ -10,18 +10,34 @@
 }
 
 .Lista__item {
-    padding: 20px;
-    border-bottom: 1px solid #ccc;
-    display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 
 .Lista__item__container {
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    width: 80%;
+    margin-left: 30px;
+}
+
+.Lista__item__container_0 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px;
+    width: 100%;
+    background-color: #f8cf0478;
+    justify-content: space-between;
+    margin-left: 30px;
 }
 
 .Lista__item__container__left {
@@ -30,6 +46,8 @@
     margin-right: 200px;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .Lista__item__container__right {
@@ -38,17 +56,16 @@
     align-items: flex-start;
 }
 
-.Lista__item__container__left__nombre {
+.nombre {
     font-size: 20px;
     font-weight: bold;
+    color: #27DAC6;
 }
 
-.Lista__item__container__left__precio {
+.Lista__item__container__left__farmacia {
     font-size: 16px;
-    color: #ccc;
 }
 
-.Lista__item__container__right__farmacia {
+.Lista__item__container__right__precio {
     font-size: 16px;
-    color: #ccc;
 }
