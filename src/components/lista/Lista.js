@@ -50,7 +50,10 @@ function Lista({ drugs }) {
                 {
                     drugs.length > 0 ? (
                         drugs[0] === -1 ? (
-                            <div>
+                            <div className="Lista_item">
+                                <div className="Lista__item__container__left">
+                                    <div className="Lista__item__container__left__nombre">Ingrese el Medicamento que desea buscar</div>
+                                </div>
                             </div>
                         ) : (
                             drugs.map((drug, index) => {
