@@ -7,6 +7,8 @@ import Lista from './components/lista/Lista';
 import Mapa from "./components/mapa/Mapa";
 import {useGeolocated} from 'react-geolocated';
 import { farmaciasDrSimi } from './assets/farmaciasDrSimi';
+import { farmaciasAhumada } from './assets/farmaciasAhumada';
+import { farmaciasEco } from './assets/farmaciasEco';
 
 function App() {
 
@@ -33,7 +35,7 @@ function App() {
           <div className="mapcontainer">
             <div>
               <div className="mapa">
-                <Mapa long={coords.longitude} lat={coords.latitude} farmaciasDrSimi={farmaciasDrSimi} />
+                <Mapa long={coords.longitude} lat={coords.latitude} farmaciasDrSimi={farmaciasDrSimi} farmaciasAhumada={farmaciasAhumada} farmaciasEco={farmaciasEco}/>
               </div>
             </div>
           </div>

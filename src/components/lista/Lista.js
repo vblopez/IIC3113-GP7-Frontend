@@ -14,6 +14,7 @@ function Lista({ drugs }) {
                         </div>
                         <div className="Lista__item__container__right">
                             <div className="Lista__item__container__right__precio">{instance.precio}</div>
+                            <div className="Lista__item__container__right__precio">{instance.link}</div>
                         </div>
                     </div>
                 </div>
@@ -26,6 +27,7 @@ function Lista({ drugs }) {
                         <div className="Lista__item__container__right">
                             <div className="Lista__item__container__right__precio">{instance.precio}</div>
                         </div>
+                        <div>{instance.imagen}</div>
                     </div>
                 </div>
                 )}

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Buscador.css";
-import allDrugs from "../../drugs.json";
+import allDrugs from "../../events.json";
 
 function Buscador({ setDrugs }) {
 
