@@ -24,6 +24,7 @@
     border-radius: 5px;
     margin: 10px;
     width: 80%;
+    justify-content: space-between;
 }
 
 .Lista__item__container_0 {
@@ -65,4 +66,23 @@
 
 .Lista__item__container__right__precio {
     font-size: 16px;
+}
+
+.image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.link {
+    text-decoration: none;
+    color: #27DAC6;
+    margin-left: 10px;
+}
+
+.cont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }

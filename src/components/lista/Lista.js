@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Lista.css";
 
 function Lista({ drugs }) {
@@ -7,18 +7,23 @@ function Lista({ drugs }) {
         return (
             <>
                 {index !== 0 ? (
-                <div className="Lista_item" key={index}>
-                    <div className="Lista__item__container">
-                        <div className="Lista__item__container__left">
-                            <div className="Lista__item__container__left__farmacia">{instance.farmacia}</div>
+                    <p className="cont">
+                    <img className='image' src={instance.imagen} alt="imagen" />
+                        <div className="Lista_item" key={index}>
+                            <div className="Lista__item__container">
+                                <div className="Lista__item__container__left">
+                                    <div className="Lista__item__container__left__farmacia">{instance.farmacia}</div>
+                                </div>
+                                <div className="Lista__item__container__right">
+                                    <div className="Lista__item__container__right__precio">{instance.precio}</div>
+                                </div>
+                                <a href={instance.link} className="link">Comprar</a>
+                            </div>
                         </div>
-                        <div className="Lista__item__container__right">
-                            <div className="Lista__item__container__right__precio">{instance.precio}</div>
-                            <div className="Lista__item__container__right__precio">{instance.link}</div>
-                        </div>
-                    </div>
-                </div>
+                    </p>
                 ) : (
+                <p className="cont">
+                <img className='image' src={instance.imagen} alt="imagen" />
                 <div className="Lista_item" key={index}>
                     <div className="Lista__item__container_0">
                         <div className="Lista__item__container__left">
@@ -27,9 +32,10 @@ function Lista({ drugs }) {
                         <div className="Lista__item__container__right">
                             <div className="Lista__item__container__right__precio">{instance.precio}</div>
                         </div>
-                        <div>{instance.imagen}</div>
+                        <a href={instance.link} className="link">Comprar</a>
                     </div>
                 </div>
+                </p>
                 )}
             </>
         );

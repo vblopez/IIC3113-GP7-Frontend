@@ -37,7 +37,9 @@ function Buscador({ setDrugs }) {
                     if (drugs[j].nombre === name) {
                         let instance = {
                             farmacia: drugs[j].farmacia,
-                            precio: drugs[j].precio
+                            precio: drugs[j].precio,
+                            link: drugs[j].link,
+                            imagen: drugs[j].imagen
                         };
                         instances.push(instance);
                     }
