@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup} from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import L from 'leaflet';
 
-function Mapa({long, lat}) {
+function Mapa({long, lat, farmaciasDrSimi}) {
 
     const position = [lat, long]
 
@@ -15,6 +15,16 @@ function Mapa({long, lat}) {
         });
         return icon;
       }
+    
+    function GetDrSimiIcon({ size }) {
+      const icon = L.icon({
+        iconUrl: require('../../assets/dr-simi.png'),
+        iconSize: [size, (3/2)*size],
+        popupAnchor: [0, -size/2],
+        iconAnchor: [size/2, size],
+      });
+      return icon;
+    }
   
     return (
         <MapContainer center={position} zoom={13} scrollWheelZoom={false} className="mapa">
@@ -27,6 +37,20 @@ function Mapa({long, lat}) {
                 Tu Ubicación
             </Popup>
         </Marker>
+        {farmaciasDrSimi.map((farmacia, index) => (
+            <>
+              <Marker key={index} position={[farmacia.lat, farmacia.lon]} icon={GetDrSimiIcon({ size: 25 })}>
+                <Popup>
+                  <div style={{fontWeight: 'bold'}}>
+                    Farmacias del Dr Simi
+                  </div>
+                  <div style={{ fontStyle: 'italic' }}>
+                    {farmacia.direc}
+                  </div>
+                </Popup>
+              </Marker>
+            </>
+        ))}
         </MapContainer>
     );
   }

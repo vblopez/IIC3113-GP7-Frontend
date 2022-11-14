@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 import logo from './assets/buscamedi.png';
-import farmacias from './assets/logo-farmacias.png';
+import farmaciasLogo from './assets/logo-farmacias.png';
 import './App.css';
-import Location from './components/location/Location';
 import Buscador from './components/buscador/Buscador';
 import Lista from './components/lista/Lista';
 import Mapa from "./components/mapa/Mapa";
 import {useGeolocated} from 'react-geolocated';
+import { farmaciasDrSimi } from './assets/farmaciasDrSimi';
 
 function App() {
 
@@ -33,7 +33,7 @@ function App() {
           <div className="mapcontainer">
             <div>
               <div className="mapa">
-                <Mapa long={coords.longitude} lat={coords.latitude} />
+                <Mapa long={coords.longitude} lat={coords.latitude} farmaciasDrSimi={farmaciasDrSimi} />
               </div>
             </div>
           </div>
@@ -43,7 +43,7 @@ function App() {
       <Buscador setDrugs={setDrugs} />
       <Lista drugs={drugs} />
       <footer className="App-footer">
-        <img src={farmacias} className="logo-farmacias" />
+        <img src={farmaciasLogo} className="logo-farmacias" />
       </footer>
     </div>
   );
